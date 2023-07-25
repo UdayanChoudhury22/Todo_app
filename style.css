@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main
+{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(37, 35, 35);
+}
+body{
+    /* width: 100%;
+    height: 100vh;
+    background-color: hsl(235, 21%, 11%); */
+    font-family: system-ui;
+}
+.banner-con{           /*darkmode */
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner{
+    width: 100%;
+    height: 100%;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("./images/2292814.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;   
+}
+.content{
+    width: 37.5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40vh;
+    /* background-color: blue; */
+
+    
+}
+.content h1{
+    letter-spacing: 3px;
+    color: #fff;
+}
+.content img{       /*dark*/
+    height: 34px;
+}
+.todo{
+    width: 37.5rem;
+    max-height: 100vh;
+    /* background-color: pink; */
+    /* padding-left: 2rem;
+    padding-right: 2rem; */
+    
+}
+form{
+    width: 100%;
+    height: 83px;
+}
+form input{             /*dark_mode*/
+    width: 100%;
+    padding: 15px 30px;
+    border-radius: 5px;
+    margin-top: 2rem;
+    background: hsl(235, 24%, 19%);
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    outline: none;
+    border: none;
+}
+input::placeholder{
+    color: #fff;
+    letter-spacing: 2px;
+}
+.list{
+    width: 100%;
+    max-height: 100vh;
+    margin-top: 2rem
+}
+.todo-con{
+    width: 100%;
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 5px;
+    
+}
+.todo-li{
+    display: flex;
+    background-color: hsl(235, 24%, 19%);
+    padding: 1rem 0.9rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-style: italic;
+    font-size: 18px;
+    align-items: center;
+}
+
+.todo-li:hover
+{
+    background-color:hsl(236, 24%, 12%) ;
+    scale: 101%;
+}
+.todo-li p{
+    width: 92%;
+    color: #fff;
+}
+.todo-li .check{
+    width: 20px;
+    height: 20px;
+    border: 1px solid hsl(233, 14%, 35%);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.todo-li .check img{
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+.todo-li .close{
+    background: transparent;
+    border: none;
+    outline: none;
+    opacity: 0;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+.todo-li:hover .close{
+    opacity: 1;
+}
+.hr{
+    width: 100%;
+    background: hsl(233, 14%, 35%);
+    height: 0.8px;
+}
+.info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: hsl(234, 11%, 52%);
+    padding: 1rem 0.9rem;
+    background: hsl(235, 24%, 19%);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    
+}
+
+#second
+{
+    display: none;
+}
+
+.choice{
+    display: flex;
+}
+.choice p{
+    padding:  0 5px;
+}
+.info p:hover{
+ color: hsl(220, 98%, 61%);
+}
+.active{
+    color: hsl(220, 98%, 61%);
+}
+.active-check{
+    background: linear-gradient( hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+}
+.active-check img{
+    transform: scale(1) !important;
+}
+.complete{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+/*Changing Theme Toogler..*/
+.togglediv .active::before
+{
+    content: url("./images/icon-sun.svg");
+}
+
+.theme-toggler::before
+{
+    content: url("./images/icon-sun.svg");
+}
+
+
+/*Responsive..*/
+
+@media only screen and (max-width: 560px)
+{
+    .content{
+        width: 22rem;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40vh;
+        /* background-color: blue; */
+    
+        /* padding-left: 2rem;
+        padding-right: 2rem; */
+    }
+    .content h1{
+        letter-spacing: 1.5px;
+        color: #fff;
+        font-size: 24px;
+    }
+    .content img{
+        height: 26px;
+    }
+
+
+
+    .todo{
+        width: 22rem;
+        max-height: 100vh;
+        /* background-color: pink; */
+        /* padding-left: 2rem;
+        padding-right: 2rem; */
+        
+    }
+    form{
+        width: 100%;
+        height: 70px;
+        /* background-color: silver; */
+    }
+    form input{
+        width: 100%;
+        padding: 12px 25px;
+        border-radius: 3px;
+        margin-top: 1.5rem;
+        background: hsl(235, 24%, 19%);
+        font-size: 16px;
+        color: #fff;
+        letter-spacing: 0.5px;
+        outline: none;
+        border: none;
+    }
+    input::placeholder{
+        color: #fff;
+        letter-spacing: 1px;
+    }
+
+    .list{
+        width: 100%;
+        max-height: 100vh;
+        margin-top: 1rem;
+        /* background-color: yellow; */
+    }
+    .todo-con{
+        width: 100%;
+        background-color: hsl(235, 24%, 19%);
+        border-radius: 5px;
+    }
+    .todo-li{
+        display: flex;
+        background-color: hsl(235, 24%, 19%);
+        padding: .7rem 0.7rem;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        font-style: italic;
+        font-size: 16px;
+        align-items: center;
+    }
+    
+    
+    .info{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        color: hsl(234, 11%, 52%);
+        padding: .6rem 0.7rem;
+        background: hsl(235, 24%, 19%);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        cursor: pointer;
+    }
+
+
+
+    .choice{
+        display: none;
+    }
+
+    #second
+    {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        color: hsl(234, 11%, 52%);
+        padding: .6rem 0.7rem;
+        background: hsl(235, 24%, 19%);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        cursor: pointer;
+        margin-top: 1.5rem;
+    }
+
+}
+
+
+/* Toggle bar */
+
+.toggle
+{
+    cursor: pointer;
+}
+
+
+/*dark theme*/
+
+.main.dark form input{
+    background: white;
+    color: black;
+}
+
+.main.dark input::placeholder{
+    color: black;
+}
+
+.main.dark .todo-con{
+    background-color: white;    
+}
+.main.dark .todo-li{
+    background-color: white;
+}
+
+.main.dark .todo-li:hover
+{
+    background-color:rgb(228, 224, 224) ;
+}
+
+.main.dark .todo-li p{
+    color: black;
+}
+.main.dark .todo-li .check{
+    border: 1px solid hsl(240, 1%, 74%);
+}
+
+.main.dark .hr{
+    background: hsl(240, 1%, 52%);
+}
+
+.main.dark .info{
+    color: hsl(234, 11%, 52%);
+    background: white; 
+}
+
+.main.dark .info p:hover{
+ color: black;
+}
+
+.main.dark .active{
+    color: black;
+}
+
+.main.dark #second
+{
+    color: hsl(234, 11%, 52%);
+    background: white;
+}
+/* .main.dark body
+{
+    background-color: rgb(177, 174, 174);
+} */
+
+.main.dark .banner{
+    width: 100%;
+    height: 100%;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("./images/2292819.jpg");
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    
+}
+
+.main.dark
+{
+    background-color: rgb(230, 227, 227);
+}
